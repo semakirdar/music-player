@@ -157,7 +157,7 @@ function nextButton() {
 buttonNext.addEventListener('click', function () {
     nextButton();
 });
-buttonPrev.addEventListener('click', function () {
+function prev(){
     if (currentSongIndex <= 0) {
         currentSongIndex = musicList.length - 1;
     } else {
@@ -166,6 +166,10 @@ buttonPrev.addEventListener('click', function () {
     }
     print();
     pause();
+}
+buttonPrev.addEventListener('click', function () {
+    prev();
+
 });
 
 function print() {
@@ -186,6 +190,9 @@ backward.addEventListener('click', function () {
     audio.currentTime -= 10;
     if (!isPlaying) {
         play();
+    }
+    if(audio.currentTime<=0){
+        prev();
     }
 });
 
