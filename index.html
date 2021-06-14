@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music player</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="view" id="view">
+        <div class="music-player">
+
+            <div class="musicInfo">
+                <div class="music-img">
+                    <img id="musicImg" src="https://data.opus3a.com/product_photo/70/70620d07faa76241ecf27bf7fd526312/max/638635dc5a54f121e61ce9a11d44ecda.jpg">
+                </div>
+                <div class="music-name" id="musicName">
+                    <h3>Eski köprünün altında</h3>
+                </div>
+                <div class="music-artist text" id="musicArtist">
+                    <p>Duman</p>
+                </div>
+            </div>
+
+
+            <div class="music-slider">
+                <input type="range" id="musicSlider" name="vol" step="1" min="0" max="" value="0">
+            </div>
+
+            <div class="time">
+                <div class="text" id="currentTime">
+                    00:00
+                </div>
+                <div class="text" id="duration">
+                    3:02
+                </div>
+            </div>
+
+            <div class="music-button icons">
+                <div><i class="fas fa-step-backward" id="buttonPrev"></i></div>
+                <div><i class="fas fa-share fa-flip-horizontal" id="backward"></i></div>
+                <div id="playBtn"><i class="fas fa-play play-icon"></i></div>
+                <div><i class="fas fa-share" id="forward"></i></div>
+                <div><i class="fas fa-step-forward" id="buttonNext"></i></div>
+            </div>
+            <div class="volume-slider" id="volumeSliderWrapper">
+                <input type="range" id="volumeSlider" name="vol" step="0.1" min="0" max="1">
+            </div>
+            <div class="music-options icons">
+                <div><i class="fas fa-bars" id="musicBars"></i></div>
+                <div><i class="far fa-share-square"></i></div>
+                <div><i class="fas fa-volume-up" id="btnVolume"></i></div>
+
+            </div>
+
+            <div id="modal">
+                <div class="modal-title">
+                    <div class="action-buttons">
+                        <div class="action-btn action-btn-close" id="modalClose">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="action-btn action-btn-minimize">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <div class="action-btn action-btn-expand">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+
+                    <div>Song List</div>
+                </div>
+                <div class="modal-content" id="modalContent"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

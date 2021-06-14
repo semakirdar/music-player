@@ -1,0 +1,243 @@
+body {
+    font-family: Arial;
+}
+
+.view {
+    width: 320px;
+    height: 700px;
+    background-color: #201f47;
+    margin: 0 auto;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-player {
+    border-radius: 35px;
+    position: absolute;
+    bottom: 0;
+    background-color: #272a53;
+    width: 320px;
+    height: 670px;
+}
+
+.music-player .music-img {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.music-player .music-img img {
+    width: 270px;
+    height: 270px;
+}
+
+.text {
+    color: #acaaaa;
+    text-align: center;
+    font-size: 13px;
+}
+
+.music-name {
+    color: #e0dede;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.music-artist p {
+    margin-top: 0;
+}
+
+.music-slider input {
+    width: 90%;
+    -webkit-appearance: none;
+    background: #900a70;
+    height: 7px;
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #efecec;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+}
+
+.music-slider {
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.music-button {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #909090;
+}
+
+.music-options {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons i {
+    text-align: center;
+    color: #dedbdb;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.play-icon {
+    background-color: #900a70;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+#playBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-slider {
+    position: absolute;
+    right: -14px;
+    bottom: 110px;
+    background-color: #3e3e3e;
+    transform: rotate(270deg);
+    width: 80px;
+    padding: 15px;
+    display: none;
+    border-radius: 8px;
+}
+
+#volumeSlider {
+    width: 100%;
+}
+
+#modal {
+    padding: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    width: 260px;
+    height: 440px;
+    border-radius: 15px;
+    display: none;
+    background-color: rgba(42, 42, 101, 0.85);
+    color: white;
+}
+
+/*#modalClose {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 15px;
+
+}*/
+
+.songImg{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+.songItem{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom:20px;
+    cursor: pointer;
+}
+
+.modal-title{
+    padding-bottom: 20px;
+}
+
+.notification{
+    background-color: #dedbdb;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    animation-name: notificationAnimation;
+    animation-duration: 1s;
+}
+
+.notification img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.action-buttons{
+    display: flex;
+}
+
+.action-buttons:hover .action-btn i{
+    display: block;
+}
+
+.action-btn{
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.action-btn i{
+    font-size: 10px;
+    display: none;
+}
+
+.action-btn.action-btn-close{
+    background-color: #ec3d3d;
+}
+
+.action-btn.action-btn-minimize{
+    background-color: #fdae37;
+}
+
+.action-btn.action-btn-expand{
+    background-color: #0ac40a;
+}
+
+.modal-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+@keyframes notificationAnimation {
+    from {
+        margin-top: -100px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
